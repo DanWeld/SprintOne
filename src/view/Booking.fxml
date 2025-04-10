@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.BookingController"
+      spacing="10" padding="20"
+      prefHeight="400.0" prefWidth="600.0">
+    
+    <GridPane hgap="10" vgap="10">
+        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+        
+        <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextArea fx:id="location" editable="false" prefHeight="50" 
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Price Per Night:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextArea fx:id="pricePerNight" editable="false" prefHeight="30" 
+                  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Facilities:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextArea fx:id="propertyFacilities" editable="false" prefHeight="100" 
+                  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Label text="End Date:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <DatePicker fx:id="changeEndDate" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        
+        <Label text="Availability:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextArea fx:id="availability" editable="false" prefHeight="30" 
+                  GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </GridPane>
+    
+    <HBox alignment="CENTER" spacing="20">
+        <Button text="Book" prefWidth="100"/>
+    </HBox>
+</VBox>
